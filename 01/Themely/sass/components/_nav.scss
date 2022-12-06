@@ -1,0 +1,64 @@
+.nav {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: 1fr repeat(2, 4fr) 1fr 1fr;
+  padding-top: 16rem;
+  padding-bottom: 10rem;
+
+  background-color: var(--light);
+
+  &__logo {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+
+  &__lblock {
+    grid-row: 1 / 2;
+    grid-column: 4 / 5;
+  }
+
+  &__dropl {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    background-color: var(--light);
+    display: none;
+    text-align: justify;
+  }
+
+  &__hamburger:hover {
+    opacity: 0.5;
+    box-shadow: 0 3000px rgba(0, 0, 0, 0.2) inset;
+  }
+
+  &__toggle:checked ~ &__dropl {
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    li {
+      padding: 10rem 10rem;
+      border-top: 1px var(--delta) solid;
+    }
+  }
+
+  @include respond-to("small") {
+    grid-template-columns: 1fr min-content 4fr min-content 1fr;
+
+    &__dropl {
+      grid-row: 1 / 2;
+      grid-column: 4 / 5;
+
+      display: flex;
+      align-items: center;
+      justify-content: end;
+
+      li {
+        margin-left: 20rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    }
+
+    &__hamburger {
+      display: none;
+    }
+  }
+}

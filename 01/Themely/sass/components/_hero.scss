@@ -1,0 +1,176 @@
+.hero {
+  background-color: var(--light);
+
+  display: grid;
+  grid-template-rows: 1fr repeat(2, min-content) 1fr min-content 2fr;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  text-align: center;
+
+  &--bgimg {
+    background-image: url(../../images/pier09b.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    box-shadow: 0 3000px rgba(0, 0, 0, 0) inset;
+    height: 720rem;
+  }
+
+  h1 {
+    font-size: 100rem;
+    letter-spacing: 2px;
+    color: var(--light);
+    // margin-top: 40rem;
+    font-family: Century Gothic;
+    letter-spacing: 5rem;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+
+  h2 {
+    font-size: 70rem;
+    color: var(--light);
+    margin-bottom: 40rem;
+    font-family: Century Gothic;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+  }
+
+  h3 {
+    font-size: 18rem;
+    font-weight: bold;
+    color: var(--light);
+    margin-bottom: 50rem;
+    font-family: Verdana;
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+  }
+
+  &__btns {
+    grid-row: 5 / 6;
+    grid-column: 2 / 3;
+  }
+
+  &__vfbutton {
+    margin-bottom: 15rem;
+    margin-right: 15rem;
+    border-style: solid;
+    border-width: 1px;
+    width: 200rem;
+    border-radius: 5px;
+    border-color: var(--light);
+    padding: 12rem;
+    color: var(--light);
+    font-family: Arial;
+    font-size: 18rem;
+    color: var(--light);
+    font-family: Verdana;
+  }
+
+  &__vfbutton:hover {
+    margin-bottom: 15rem;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: var(--light);
+    background-color: var(--light);
+    padding: 12rem;
+    color: var(--gamma);
+    font-family: Arial;
+    font-size: 20rem;
+  }
+
+  &__dlnbutton {
+    margin-left: 15rem;
+    border: none;
+    border-radius: 5px;
+    width: 200rem;
+    padding: 12rem;
+    color: var(--light);
+    background-color: var(--beta);
+    font-family: Arial;
+    font-size: 18rem;
+  }
+
+  &__dlnbutton:hover {
+    border: none;
+    border-radius: 5px;
+    padding: 12rem;
+    color: var(--gamma);
+    background-color: var(--light);
+    font-family: Arial;
+    font-size: 20rem;
+  }
+
+  @include respond-to("small") {
+    display: grid;
+    grid-template-rows: 2fr repeat(2, min-content) 1fr min-content 2fr;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    text-align: center;
+
+    &--bgimg {
+      background-image: url(../../images/pier09b.svg);
+    }
+
+    h1 {
+      // font-size: 55rem;
+      letter-spacing: 4px;
+      color: var(--light);
+      margin-bottom: 15rem;
+      font-family: Verdana;
+    }
+
+    h2 {
+      // font-size: 35rem;
+      color: var(--light);
+      margin-bottom: 40rem;
+      font-family: Verdana;
+    }
+
+    h3 {
+      // font-size: 18rem;
+      color: var(--light);
+      margin-bottom: 50rem;
+      font-family: Verdana;
+    }
+  }
+
+  // @include respond-to("large") {
+  //   &__bgimg {
+  //     background-image: url(../../images/pier09b.svg);
+  //   }
+
+  //   h1 {
+  //     font-size: 59rem;
+  //     letter-spacing: 5px;
+  //     color: var(--light);
+  //     margin-bottom: 15rem;
+  //     font-family: Verdana;
+  //   }
+
+  //   h2 {
+  //     font-size: 39rem;
+  //     color: var(--light);
+  //     margin-bottom: 40rem;
+  //     font-family: Verdana;
+  //   }
+
+  //   h3 {
+  //     font-size: 20rem;
+  //     color: var(--light);
+  //     margin-bottom: 50rem;
+  //     font-family: Verdana;
+  //   }
+
+  //   h4 {
+  //     grid-row: 5 / 6;
+  //     grid-column: 2 / 3;
+  //   }
+
+  //   h5 {
+  //     grid-row: 6 / 7;
+  //     grid-column: 2 / 3;
+  //   }
+  // }
+}

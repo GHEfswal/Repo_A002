@@ -1,0 +1,209 @@
+.features {
+  display: grid;
+  grid-template-rows: 1fr 2fr min-content 1fr;
+  grid-template-columns: 2fr min-content 2fr min-content 2fr min-content 2fr 2fr;
+  // row-gap: 30rem;
+  // column-gap: 30rem;
+
+  background-color: var(--light);
+  font-family: Verdana;
+  font-size: 14rem;
+
+  &__launch {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    margin-bottom: 30rem;
+    margin-right: 30rem;
+    text-align: justify;
+  }
+
+  &__optimized {
+    grid-row: 2 / 3;
+    grid-column: 5 / 6;
+    margin-bottom: 30rem;
+    margin-right: 30rem;
+    text-align: justify;
+  }
+
+  &__loved {
+    grid-row: 2 / 3;
+    grid-column: 7 / 8;
+    margin-bottom: 30rem;
+    margin-right: 30rem;
+    text-align: justify;
+  }
+
+  &__parallax {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+    margin-bottom: 30rem;
+    margin-right: 30rem;
+    text-align: justify;
+  }
+
+  &__panel {
+    grid-row: 3 / 4;
+    grid-column: 5 / 6;
+    margin-bottom: 30rem;
+    margin-right: 30rem;
+    text-align: justify;
+  }
+
+  &__wooc {
+    grid-row: 3 / 4;
+    grid-column: 7 / 8;
+    margin-bottom: 30rem;
+    margin-right: 30rem;
+    text-align: justify;
+  }
+
+  &__launchicon {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    // margin-top: 40rem;
+    margin-right: 10rem;
+  }
+
+  &__optimizedicon {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+    // margin-top: 40rem;
+    margin-right: 10rem;
+  }
+
+  &__lovedicon {
+    grid-row: 2 / 3;
+    grid-column: 6 / 7;
+    // margin-top: 40rem;
+    margin-right: 10rem;
+  }
+
+  &__parallaxicon {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    // margin-top: 40rem;
+    margin-right: 10rem;
+  }
+
+  &__panelicon {
+    grid-row: 3 / 4;
+    grid-column: 4 / 5;
+    // margin-top: 40rem;
+    margin-right: 10rem;
+  }
+
+  &__woocicon {
+    grid-row: 3 / 4;
+    grid-column: 6 / 7;
+    // margin-top: 40rem;
+    margin-right: 10rem;
+  }
+
+  h6 {
+    font-size: 16rem;
+    font-weight: bold;
+    margin-bottom: 10rem;
+  }
+
+  // @include respond-to("small") {
+  //   // display: grid;
+  //   grid-template-rows: 1fr 2fr repeat(5, min-content) 1fr;
+  //   grid-template-columns: 1fr min-content 12fr 1fr;
+  // }
+
+  // &__launch {
+  //   grid-row: 2 / 3;
+  //   grid-column: 3 / 4;
+  //   margin-bottom: 30rem;
+  //   margin-right: 20rem;
+  //   text-align: justify;
+  // }
+
+  // &__optimized {
+  //   grid-row: 2 / 3;
+  //   grid-column: 5 / 6;
+  //   margin-bottom: 30rem;
+  //   margin-right: 20rem;
+  //   text-align: justify;
+  // }
+
+  // &__loved {
+  //   grid-row: 2 / 3;
+  //   grid-column: 7 / 8;
+  //   margin-bottom: 30rem;
+  //   margin-right: 20rem;
+  //   text-align: justify;
+  // }
+
+  // &__parallax {
+  //   grid-row: 3 / 4;
+  //   grid-column: 3 / 4;
+  //   margin-bottom: 30rem;
+  //   margin-right: 20rem;
+  //   text-align: justify;
+  // }
+
+  // &__panel {
+  //   grid-row: 3 / 4;
+  //   grid-column: 5 / 6;
+  //   margin-bottom: 30rem;
+  //   margin-right: 20rem;
+  //   text-align: justify;
+  // }
+
+  // &__wooc {
+  //   grid-row: 3 / 4;
+  //   grid-column: 7 / 8;
+  //   // margin-bottom: 30rem;
+  //   margin-right: 20rem;
+  //   text-align: justify;
+  // }
+
+  // &__launchicon {
+  //   grid-row: 2 / 3;
+  //   grid-column: 2 / 3;
+  //   // margin-top: 40rem;
+  //   margin-right: 20rem;
+  // }
+
+  // &__optimizedicon {
+  //   grid-row: 2 / 3;
+  //   grid-column: 4 / 5;
+  //   // margin-top: 40rem;
+  //   margin-right: 20rem;
+  // }
+
+  // &__lovedicon {
+  //   grid-row: 2 / 3;
+  //   grid-column: 6 / 7;
+  //   // margin-top: 40rem;
+  //   margin-right: 20rem;
+  // }
+
+  // &__parallaxicon {
+  //   grid-row: 3 / 4;
+  //   grid-column: 2 / 3;
+  //   // margin-top: 40rem;
+  //   margin-right: 20rem;
+  // }
+
+  // &__panelicon {
+  //   grid-row: 3 / 4;
+  //   grid-column: 4 / 5;
+  //   // margin-top: 40rem;
+  //   margin-right: 20rem;
+  // }
+
+  // &__woocicon {
+  //   grid-row: 3 / 4;
+  //   grid-column: 6 / 7;
+  //   // margin-top: 40rem;
+  //   margin-right: 20rem;
+  // }
+
+  // @include respond-to("medium") {
+  //   display: grid;
+  //   grid-template-rows: 1fr 2fr min-content 1fr;
+  //   grid-template-columns: 1fr min-content 8fr min-content 8fr min-content 8fr 1fr;
+  // }
+}
