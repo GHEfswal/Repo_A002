@@ -33,7 +33,7 @@
 
   &__toggle:checked ~ &__dropl {
     display: block;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana;
     li {
       padding: 10rem 10rem;
       border-top: 1px var(--delta) solid;

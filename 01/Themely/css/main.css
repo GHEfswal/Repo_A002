@@ -454,7 +454,7 @@ h1 {
 }
 .nav__toggle:checked ~ .nav__dropl {
   display: block;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana;
 }
 .nav__toggle:checked ~ .nav__dropl li {
   padding: 10rem 10rem;
@@ -484,8 +484,8 @@ h1 {
 .hero {
   background-color: var(--light);
   display: grid;
-  grid-template-rows: 1fr repeat(2, -webkit-min-content) 1fr -webkit-min-content 2fr;
-  grid-template-rows: 1fr repeat(2, min-content) 1fr min-content 2fr;
+  grid-template-rows: 1fr repeat(2, -webkit-min-content) 1fr -webkit-min-content 1fr;
+  grid-template-rows: 1fr repeat(2, min-content) 1fr min-content 1fr;
   grid-template-columns: auto auto auto;
   align-items: center;
   text-align: center;
@@ -496,27 +496,27 @@ h1 {
   background-size: cover;
   width: 100%;
   box-shadow: 0 3000px rgba(0, 0, 0, 0) inset;
-  height: 720rem;
+  height: 772rem;
 }
 .hero h1 {
-  font-size: 100rem;
-  letter-spacing: 2px;
+  font-size: 48rem;
   color: var(--light);
-  font-family: Century Gothic;
-  letter-spacing: 5rem;
+  margin-top: 40rem;
+  margin-bottom: 14rem;
+  font-family: Verdana;
   grid-row: 2/3;
   grid-column: 2/3;
 }
 .hero h2 {
-  font-size: 70rem;
+  font-size: 30rem;
   color: var(--light);
   margin-bottom: 40rem;
-  font-family: Century Gothic;
+  font-family: Verdana;
   grid-row: 3/4;
   grid-column: 2/3;
 }
 .hero h3 {
-  font-size: 18rem;
+  font-size: 14rem;
   font-weight: bold;
   color: var(--light);
   margin-bottom: 50rem;
@@ -527,10 +527,12 @@ h1 {
 .hero__btns {
   grid-row: 5/6;
   grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hero__vfbutton {
   margin-bottom: 15rem;
-  margin-right: 15rem;
   border-style: solid;
   border-width: 1px;
   width: 200rem;
@@ -544,7 +546,6 @@ h1 {
   font-family: Verdana;
 }
 .hero__vfbutton:hover {
-  margin-bottom: 15rem;
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
@@ -553,10 +554,9 @@ h1 {
   padding: 12rem;
   color: var(--gamma);
   font-family: Arial;
-  font-size: 20rem;
+  font-size: 18rem;
 }
 .hero__dlnbutton {
-  margin-left: 15rem;
   border: none;
   border-radius: 5px;
   width: 200rem;
@@ -577,84 +577,136 @@ h1 {
 }
 @media (min-width: 767px) {
   .hero {
-    display: grid;
     grid-template-rows: 2fr repeat(2, -webkit-min-content) 1fr -webkit-min-content 2fr;
     grid-template-rows: 2fr repeat(2, min-content) 1fr min-content 2fr;
-    grid-template-columns: auto auto auto;
-    align-items: center;
-    text-align: center;
   }
   .hero--bgimg {
     background-image: url(../../images/pier09b.svg);
+    height: 720rem;
   }
   .hero h1 {
+    font-size: 55rem;
     letter-spacing: 4px;
     color: var(--light);
     margin-bottom: 15rem;
     font-family: Verdana;
   }
   .hero h2 {
+    font-size: 35rem;
     color: var(--light);
     margin-bottom: 40rem;
     font-family: Verdana;
   }
   .hero h3 {
+    font-size: 18rem;
     color: var(--light);
     margin-bottom: 50rem;
     font-family: Verdana;
+  }
+  .hero__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 992px) {
+  .hero__bgimg {
+    background-image: url(../../images/pier09b.svg);
+    height: 720rem;
+  }
+  .hero__btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero__vfbutton {
+    margin-bottom: 0rem;
+    margin-right: 15rem;
+  }
+  .hero__dnlbutton {
+    margin-bottom: 0rem;
+    margin-left: 15rem;
+  }
+  .hero h1 {
+    font-size: 85rem;
+    color: var(--light);
+    margin-bottom: 15rem;
+    font-family: Century Gothic;
+  }
+  .hero h2 {
+    font-size: 38rem;
+    color: var(--light);
+    margin-bottom: 40rem;
+    font-family: Verdana;
+  }
+  .hero h3 {
+    font-size: 18rem;
+    color: var(--light);
+    margin-bottom: 50rem;
+    font-family: Verdana;
+  }
+  .hero__vfbutton {
+    margin-bottom: 0rem;
+    margin-right: 15rem;
+  }
+  .hero__dnlbutton {
+    margin-bottom: 0rem;
+    margin-left: 15rem;
   }
 }
 
 .features {
   display: grid;
-  grid-template-rows: 1fr 2fr -webkit-min-content 1fr;
-  grid-template-rows: 1fr 2fr min-content 1fr;
-  grid-template-columns: 2fr -webkit-min-content 2fr -webkit-min-content 2fr -webkit-min-content 2fr 2fr;
-  grid-template-columns: 2fr min-content 2fr min-content 2fr min-content 2fr 2fr;
-  background-color: var(--light);
+  grid-template-rows: 1fr 2fr repeat(5, -webkit-min-content) 1fr;
+  grid-template-rows: 1fr 2fr repeat(5, min-content) 1fr;
+  grid-template-columns: 1fr auto 12fr 1fr;
   font-family: Verdana;
-  font-size: 14rem;
+  font-size: 13rem;
+  background-color: var(--light);
+}
+.features h6 {
+  font-size: 16rem;
+  font-weight: bold;
+  margin-bottom: 8rem;
 }
 .features__launch {
   grid-row: 2/3;
   grid-column: 3/4;
   margin-bottom: 30rem;
-  margin-right: 30rem;
+  margin-right: 20rem;
   text-align: justify;
 }
 .features__optimized {
-  grid-row: 2/3;
-  grid-column: 5/6;
-  margin-bottom: 30rem;
-  margin-right: 30rem;
-  text-align: justify;
-}
-.features__loved {
-  grid-row: 2/3;
-  grid-column: 7/8;
-  margin-bottom: 30rem;
-  margin-right: 30rem;
-  text-align: justify;
-}
-.features__parallax {
   grid-row: 3/4;
   grid-column: 3/4;
   margin-bottom: 30rem;
-  margin-right: 30rem;
+  margin-right: 20rem;
+  text-align: justify;
+}
+.features__loved {
+  grid-row: 4/5;
+  grid-column: 3/4;
+  margin-bottom: 30rem;
+  margin-right: 20rem;
+  text-align: justify;
+}
+.features__parallax {
+  grid-row: 5/6;
+  grid-column: 3/4;
+  margin-right: 20rem;
   text-align: justify;
 }
 .features__panel {
-  grid-row: 3/4;
-  grid-column: 5/6;
-  margin-bottom: 30rem;
-  margin-right: 30rem;
+  grid-row: 6/7;
+  grid-column: 3/4;
+  margin-right: 20rem;
   text-align: justify;
 }
 .features__wooc {
-  grid-row: 3/4;
-  grid-column: 7/8;
-  margin-bottom: 30rem;
-  margin-right: 30rem;
+  grid-row: 7/8;
+  grid-column: 3/4;
+  margin-right: 20rem;
   text-align: justify;
 }
 .features__launchicon {
@@ -663,32 +715,194 @@ h1 {
   margin-right: 10rem;
 }
 .features__optimizedicon {
-  grid-row: 2/3;
-  grid-column: 4/5;
-  margin-right: 10rem;
-}
-.features__lovedicon {
-  grid-row: 2/3;
-  grid-column: 6/7;
-  margin-right: 10rem;
-}
-.features__parallaxicon {
   grid-row: 3/4;
   grid-column: 2/3;
   margin-right: 10rem;
 }
+.features__lovedicon {
+  grid-row: 4/5;
+  grid-column: 2/3;
+  margin-right: 10rem;
+}
+.features__parallaxicon {
+  grid-row: 5/6;
+  grid-column: 2/3;
+  margin-right: 10rem;
+}
 .features__panelicon {
-  grid-row: 3/4;
-  grid-column: 4/5;
+  grid-row: 6/7;
+  grid-column: 2/3;
   margin-right: 10rem;
 }
 .features__woocicon {
-  grid-row: 3/4;
-  grid-column: 6/7;
+  grid-row: 7/8;
+  grid-column: 2/3;
   margin-right: 10rem;
 }
-.features h6 {
-  font-size: 16rem;
-  font-weight: bold;
-  margin-bottom: 10rem;
+@media (min-width: 767px) {
+  .features {
+    grid-template-rows: 55px 2fr -webkit-min-content 55px;
+    grid-template-rows: 55px 2fr min-content 55px;
+    grid-template-columns: 40px -webkit-min-content 2fr -webkit-min-content 2fr -webkit-min-content 2fr 40px;
+    grid-template-columns: 40px min-content 2fr min-content 2fr min-content 2fr 40px;
+    background-color: var(--light);
+    font-family: Verdana;
+    font-size: 14rem;
+  }
+  .features p {
+    font-size: 12rem;
+  }
+  .features__launch {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    margin-right: 10rem;
+    text-align: left;
+  }
+  .features__optimized {
+    grid-row: 2/3;
+    grid-column: 5/6;
+    margin-right: 10rem;
+    text-align: left;
+  }
+  .features__loved {
+    grid-row: 2/3;
+    grid-column: 7/8;
+    margin-right: 10rem;
+    text-align: left;
+  }
+  .features__parallax {
+    grid-row: 3/4;
+    grid-column: 3/4;
+    margin-right: 10rem;
+    text-align: left;
+  }
+  .features__panel {
+    grid-row: 3/4;
+    grid-column: 5/6;
+    margin-right: 10rem;
+    text-align: left;
+  }
+  .features__wooc {
+    grid-row: 3/4;
+    grid-column: 7/8;
+    margin-right: 10rem;
+    text-align: left;
+  }
+  .features__launchicon {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin-right: 10rem;
+  }
+  .features__optimizedicon {
+    grid-row: 2/3;
+    grid-column: 4/5;
+    margin-right: 10rem;
+  }
+  .features__lovedicon {
+    grid-row: 2/3;
+    grid-column: 6/7;
+    margin-right: 10rem;
+  }
+  .features__parallaxicon {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    margin-right: 10rem;
+  }
+  .features__panelicon {
+    grid-row: 3/4;
+    grid-column: 4/5;
+    margin-right: 10rem;
+  }
+  .features__woocicon {
+    grid-row: 3/4;
+    grid-column: 6/7;
+    margin-right: 10rem;
+  }
+}
+@media (min-width: 992px) {
+  .features {
+    display: grid;
+    grid-template-rows: 1fr 2fr -webkit-min-content 1fr;
+    grid-template-rows: 1fr 2fr min-content 1fr;
+    grid-template-columns: 1fr -webkit-min-content 2fr -webkit-min-content 2fr -webkit-min-content 2fr 1fr;
+    grid-template-columns: 1fr min-content 2fr min-content 2fr min-content 2fr 1fr;
+    font-family: Verdana;
+    font-size: 14rem;
+    background-color: var(--light);
+  }
+  .features__launch {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    margin-bottom: 30rem;
+  }
+  .features__optimized {
+    grid-row: 2/3;
+    grid-column: 5/6;
+    margin-bottom: 30rem;
+  }
+  .features__loved {
+    grid-row: 2/3;
+    grid-column: 7/8;
+    margin-bottom: 30rem;
+  }
+  .features__parallax {
+    grid-row: 3/4;
+    grid-column: 3/4;
+    margin-bottom: 30rem;
+  }
+  .features__panel {
+    grid-row: 3/4;
+    grid-column: 5/6;
+    margin-bottom: 30rem;
+  }
+  .features__wooc {
+    grid-row: 3/4;
+    grid-column: 7/8;
+    margin-bottom: 30rem;
+  }
+  .features__launchicon {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  .features__optimizedicon {
+    grid-row: 2/3;
+    grid-column: 4/5;
+  }
+  .features__lovedicon {
+    grid-row: 2/3;
+    grid-column: 6/7;
+  }
+  .features__parallaxicon {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+  .features__panelicon {
+    grid-row: 3/4;
+    grid-column: 4/5;
+  }
+  .features__woocicon {
+    grid-row: 3/4;
+    grid-column: 6/7;
+  }
+  .features h6 {
+    font-size: 16rem;
+    font-weight: bold;
+    margin-bottom: 10rem;
+  }
+}
+@media (min-width: 1200px) {
+  .features {
+    display: grid;
+    grid-template-rows: 1fr 2fr -webkit-min-content 1fr;
+    grid-template-rows: 1fr 2fr min-content 1fr;
+    grid-template-columns: 1fr -webkit-min-content 360px -webkit-min-content 360px -webkit-min-content 360px 1fr;
+    grid-template-columns: 1fr min-content 360px min-content 360px min-content 360px 1fr;
+  }
+  .features h6 {
+    font-size: 17rem;
+    font-weight: bold;
+  }
+  .features p {
+    font-size: 14rem;
+  }
 }/*# sourceMappingURL=main.css.map */
