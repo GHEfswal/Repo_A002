@@ -12,11 +12,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    box-shadow: 0 3000px rgba(0, 0, 0, 0) inset;
+    box-shadow: 0 3000px rgba(0, 0, 0, 0.3) inset;
     height: 772rem;
   }
 
-  h1 {
+  &__h1welcome {
     font-size: 48rem;
     color: var(--light);
     margin-top: 40rem;
@@ -26,7 +26,7 @@
     grid-column: 2 / 3;
   }
 
-  h2 {
+  &__h2welcome {
     font-size: 30rem;
     color: var(--light);
     margin-bottom: 40rem;
@@ -35,7 +35,7 @@
     grid-column: 2 / 3;
   }
 
-  h3 {
+  &__h3welcome {
     font-size: 14rem;
     font-weight: bold;
     color: var(--light);
@@ -110,7 +110,7 @@
       height: 720rem;
     }
 
-    h1 {
+    &__h1welcome {
       font-size: 55rem;
       letter-spacing: 4px;
       color: var(--light);
@@ -118,14 +118,14 @@
       font-family: Verdana;
     }
 
-    h2 {
+    &__h2welcome {
       font-size: 35rem;
       color: var(--light);
       margin-bottom: 40rem;
       font-family: Verdana;
     }
 
-    h3 {
+    &__h3welcome {
       font-size: 18rem;
       color: var(--light);
       margin-bottom: 50rem;
@@ -154,7 +154,7 @@
 
     &__vfbutton {
       margin-bottom: 0rem;
-      margin-right: 15rem;
+      margin-right: 30rem;
     }
 
     &__dnlbutton {
@@ -162,35 +162,25 @@
       margin-left: 15rem;
     }
 
-    h1 {
+    &__h1welcome {
       font-size: 85rem;
       color: var(--light);
       margin-bottom: 15rem;
       font-family: Century Gothic;
     }
 
-    h2 {
+    &__h2welcome {
       font-size: 38rem;
       color: var(--light);
       margin-bottom: 40rem;
       font-family: Verdana;
     }
 
-    h3 {
+    &__h3welcome {
       font-size: 18rem;
       color: var(--light);
       margin-bottom: 50rem;
       font-family: Verdana;
-    }
-
-    &__vfbutton {
-      margin-bottom: 0rem;
-      margin-right: 15rem;
-    }
-
-    &__dnlbutton {
-      margin-bottom: 0rem;
-      margin-left: 15rem;
     }
   }
 }

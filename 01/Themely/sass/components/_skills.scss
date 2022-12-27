@@ -1,0 +1,121 @@
+.skills {
+  background-color: var(--light);
+  font-family: segoe ui;
+
+  &__gridall {
+    margin-left: 20rem;
+    margin-right: 20rem;
+    // display: grid;
+    // grid-template-columns: 1fr;
+    // grid-template-rows: 1fr;
+  }
+
+  h2 {
+    font-size: 21rem;
+    text-align: center;
+    letter-spacing: 2rem;
+  }
+
+  &__underlineh2 {
+    height: 15rem;
+    width: 100px;
+    border-style: solid;
+    border-width: 2px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: var(--beta);
+    background-color: var(--light);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50rem;
+  }
+
+  &__gd1 {
+    height: 32rem;
+    width: 100%;
+    background-color: var(--delta);
+    margin-bottom: 20rem;
+  }
+
+  &__gd2 {
+    height: 32rem;
+    width: 40%;
+    background-color: var(--thmgr);
+  }
+
+  &__typ1 {
+    height: 32rem;
+    width: 100%;
+    background-color: var(--delta);
+    margin-bottom: 20rem;
+  }
+
+  &__typ2 {
+    height: 32rem;
+    width: 60%;
+    background-color: var(--thmbl);
+  }
+
+  &__hc1 {
+    height: 32rem;
+    width: 100%;
+    background-color: var(--delta);
+    margin-bottom: 20rem;
+  }
+
+  &__hc2 {
+    height: 32rem;
+    width: 80%;
+    background-color: var(--thmor);
+  }
+
+  &__prog1 {
+    height: 32rem;
+    width: 100%;
+    background-color: var(--delta);
+    margin-bottom: 20rem;
+  }
+
+  &__prog2 {
+    height: 32rem;
+    width: 100%;
+    background-color: var(--alert2);
+  }
+
+  p {
+    font-size: 15rem;
+    text-align: justify;
+    margin-top: 30rem;
+    // margin-bottom: 30rem;
+  }
+
+  &__gridall {
+    @include respond-to("small") {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 40rem;
+      margin-left: 40rem;
+      margin-right: 40rem;
+
+      &__grid1 {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+      }
+
+      &__grid2 {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+      }
+    }
+  }
+
+  @include respond-to("large") {
+    &__gridall {
+      max-width: 1200rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

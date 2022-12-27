@@ -1,0 +1,209 @@
+.contact {
+  font-family: verdana;
+  background-color: var(--gamma2);
+
+  &__container {
+    max-width: 1200rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__envelope {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 70rem;
+    margin-bottom: 20rem;
+    // margin-top: 30rem;
+  }
+
+  h3 {
+    font-size: 31rem;
+    font-weight: bold;
+    color: var(--light);
+    margin-left: 10rem;
+    margin-right: 10rem;
+    // text-align: center;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    margin-left: 12rem;
+    margin-right: 12rem;
+  }
+
+  &__doublelineL {
+    height: 7rem;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-left: none;
+    border-right: none;
+    border-color: var(--elements2);
+    margin-left: 10rem;
+  }
+
+  &__doublelineR {
+    height: 7rem;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-left: none;
+    border-right: none;
+    border-color: var(--elements2);
+    margin-right: 10rem;
+  }
+
+  &__p1 {
+    margin-top: 16rem;
+    margin-left: 32rem;
+    margin-right: 32rem;
+    margin-bottom: 20rem;
+    text-align: center;
+    color: var(--elements2);
+    font-size: 17rem;
+    line-height: 160%;
+  }
+
+  &__p2 {
+    font-size: 14rem;
+    margin-top: 16rem;
+    margin-left: 16rem;
+    margin-right: 20rem;
+    margin-bottom: 23rem;
+    color: var(--skills2);
+    // text-align: center;
+  }
+
+  h4 {
+    font-size: 20rem;
+    font-weight: bold;
+    margin-left: 16rem;
+    margin-bottom: 20rem;
+    color: var(--light);
+  }
+
+  &__cinfo {
+    margin-left: 16rem;
+    margin-bottom: 20rem;
+    color: var(--skills2);
+    // line-height: 200%;
+  }
+
+  &__socialcontainer {
+    margin-left: 10rem;
+    margin-right: auto;
+    width: 340rem;
+  }
+
+  &__social {
+    display: flex;
+    margin-top: 30rem;
+    margin-bottom: 40rem;
+    margin-left: 7rem;
+    margin-right: 61rem;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+  }
+
+  &__labels {
+    color: var(--skills2);
+    margin-left: 10rem;
+  }
+
+  &__field {
+    height: 35rem;
+    width: 340rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 20rem;
+  }
+
+  &__textarea {
+    height: 140rem;
+    width: 340rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 20rem;
+  }
+
+  &__sendbutton {
+    margin-top: 20rem;
+    margin-bottom: 200rem;
+    margin-left: 10rem;
+    border-radius: 5px;
+    background-color: var(--light);
+    padding: 12rem;
+    color: var(--gamma2);
+    font-family: Arial;
+    font-size: 18rem;
+    font-family: Verdana;
+    // border-style: solid;
+    // border-width: 1px;
+    // width: 20rem;
+    // border-color: var(--light);
+    // color: var(--light);
+  }
+
+  @include respond-to("medium") {
+    &__gridcontact {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      margin-left: 10rem;
+      margin-right: 10rem;
+
+      &__gridcinfo {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+      }
+
+      &__gridcfield {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+      }
+    }
+  }
+
+  @include respond-to("medium") {
+    h3 {
+      font-size: 57rem;
+    }
+    &__p1 {
+      margin-bottom: 40rem;
+    }
+    &__p2 {
+      margin-bottom: 50rem;
+    }
+    &__cinfo {
+      font-size: 14rem;
+      margin-bottom: 30rem;
+    }
+    h4 {
+      font-size: 25rem;
+    }
+  }
+
+  @include respond-to("large") {
+    &__field {
+      width: 100%;
+      margin-right: 20rem;
+      // height: 35rem;
+      // margin-left: 10rem;
+      // margin-bottom: 20rem;
+    }
+
+    &__textarea {
+      width: 100%;
+      margin-right: 20rem;
+      // height: 140rem;
+      // margin-left: 10rem;
+      // margin-bottom: 20rem;
+    }
+  }
+}

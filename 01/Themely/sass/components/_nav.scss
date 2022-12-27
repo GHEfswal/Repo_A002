@@ -53,7 +53,14 @@
 
       li {
         margin-left: 20rem;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: Verdana;
+      }
+
+      li:hover {
+        margin-left: 20rem;
+        font-family: Verdana;
+        text-decoration: underline var(--beta) 20%;
+        // transition: opacity 0.75s;
       }
     }
 

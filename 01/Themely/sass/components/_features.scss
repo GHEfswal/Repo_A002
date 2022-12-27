@@ -8,7 +8,7 @@
 
   background-color: var(--light);
 
-  h6 {
+  &__h6welcome {
     font-size: 16rem;
     font-weight: bold;
     margin-bottom: 8rem;
@@ -96,7 +96,6 @@
   }
 
   @include respond-to("small") {
-    // display: grid;
     grid-template-rows: 55px 2fr min-content 55px;
     grid-template-columns: 40px min-content 2fr min-content 2fr min-content 2fr 40px;
 
@@ -104,7 +103,7 @@
     font-family: Verdana;
     font-size: 14rem;
 
-    p {
+    &__pwelcome {
       font-size: 12rem;
     }
 
@@ -263,7 +262,7 @@
       grid-column: 6 / 7;
     }
 
-    h6 {
+    &__h6welcome {
       font-size: 16rem;
       font-weight: bold;
       margin-bottom: 10rem;
@@ -275,12 +274,12 @@
     grid-template-rows: 1fr 2fr min-content 1fr;
     grid-template-columns: 1fr min-content 360px min-content 360px min-content 360px 1fr;
 
-    h6 {
+    &__h6welcome {
       font-size: 17rem;
       font-weight: bold;
     }
 
-    p {
+    &__pwelcome {
       font-size: 14rem;
     }
   }
